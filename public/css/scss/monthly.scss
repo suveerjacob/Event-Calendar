@@ -1,0 +1,137 @@
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%; }
+
+.daily-flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  }
+
+.flex-item {
+  position: relative;
+  z-index: -10;
+  border: solid 1px;
+  text-align: center;
+  width: 14%;
+  min-height: 50px;
+  margin: .5px;
+  overflow: auto; }
+
+.flex-item:hover {
+  background-color: #e5e5e5;
+  cursor: pointer; }
+
+.event-icon {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.daily-flex-item {
+  border: solid 1px;
+  text-align: center;
+  width: 17.5%;
+  min-height: 50px;
+  margin: .5px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  overflow: auto; }
+
+.daily-event-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%; }
+
+.daily-event-box {
+  width: 50%; }
+
+.daily-flex-item:hover {
+  background-color: #e5e5e5;
+  cursor: pointer; }
+
+.daily-flex-item:nth-child(1) {
+  width: 5%; }
+
+.daily-flex-item:nth-child(7) {
+  width: 5%; }
+
+.current {
+  background-color: #e5e5e5; }
+
+.days {
+  font-weight: 800; }
+
+.date {
+  z-index: 10; }
+
+.monthSelect {
+  z-index: 12; }
+
+.addEvent {
+  z-index: 12; }
+
+@media screen and (max-width: 400px) {
+  .empty {
+    display: none; }
+  .days {
+    display: none; }
+  #calendar-dates {
+    margin-bottom: 100px; }
+  .flex-item {
+    width: 100%; }
+  .monthSelect {
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0px; }
+  .addEvent {
+    box-shadow: 0px -5px 5px grey;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 35px; }
+  .daily-event-box {
+    width: 100%; }
+  .mobile_date {
+    display: block; }
+  .desktop_date {
+    display: none; }
+  .daily-flex-item {
+    width: 78%; }
+  .daily-flex-item:nth-child(1) {
+    width: 10%; }
+  .daily-flex-item:nth-child(7) {
+    width: 10%; }
+  #event_detail_section {
+    margin-bottom: 80px; }
+  .daily-flex-container {
+    background-color: white;
+    position: fixed;
+    bottom: 10px;
+    width: 90%;
+    right: 5%;
+    left: 5%; } }
+
+@media screen and (min-width: 401px) and (max-width: 1000px) {
+  .mobile_date {
+    display: none; }
+  .desktop_date {
+    display: block; } }
+
+@media screen and (min-width: 1001px) {
+  .mobile_date {
+    display: none; }
+  .desktop_date {
+    display: block; } }

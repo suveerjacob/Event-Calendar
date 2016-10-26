@@ -1,0 +1,35 @@
+{
+  "October 10 2016": [
+    {
+      "title": "Columbus Day",
+      "location": "Stevens Institute of Technology",
+      "description": "Long weekend"
+    },
+    {
+      "title": "Another Event",
+      "location": "Stevens Library",
+      "description": "Testing "
+    }
+  ],
+  "October 12 2016": [
+    {
+      "title": "One More Event",
+      "location": "USA",
+      "description": "Testing"
+    }
+  ],
+  "December 25 2016": [
+    {
+      "title": "Christmas",
+      "location": "USA",
+      "description": "Festival"
+    }
+  ],
+  "October 24 2016": [
+    {
+      "title": "Submitting Assignment",
+      "location": "Stevens",
+      "description": "Completed Assignment"
+    }
+  ]
+}

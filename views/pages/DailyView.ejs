@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- jQuery fallback -->
+    <script>
+        if (!window.jQuery) { document.write('<script src="/content/js/jquery.min.js"><\/script>'); }
+    </script>
+    <script src="/content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/content/js/MonthlyScript.js"> </script>
+    <script src="/content/js/tota11y.min.js"></script>
+    <link rel="stylesheet" href="/content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/content/css/monthly.css"/>
+</head>
+
+<body onload='dailyViewLoaded("<%= date %>")' >
+
+    <div class="container">
+        <br/><br/>
+        <div id="event_detail_section" class="daily-event-container">
+            <div class="daily-event-box">
+                <button type="button" id="back_to_month" class="btn btn-primary"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span class="glyphicon glyphicon-calendar"></span>&nbsp;Monthly View&nbsp;</button>
+                <h1><strong id="selected_date"></strong></h1>
+                <br/>
+                <ul id="daily-item-list" class="list-group">
+                    <li class="list-group-item">No Events for this date</li>
+                </ul>
+
+                <button type="button" id="daily_add_event_btn" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add Event&nbsp;</button>
+                <br/><br/>
+            </div>
+            <div class="daily-event-box">
+                <br/><br/>
+                <h2 id="day_detail_1" style="margin-left: 30px"></h2>
+                <h2 id="day_detail_2" style="margin-left: 30px"></h2>
+            </div>
+        </div>
+        <div>
+            <div class="daily-flex-container">
+                <div id="decr_date" class="daily-flex-item">
+                    <span class="glyphicon glyphicon-triangle-left">
+                </div>
+                <div id="date_1" class="daily-flex-item empty near_dates">
+                </div>
+                <div id="date_2" class="daily-flex-item empty near_dates">
+                </div>
+                <div id="date_3" class="daily-flex-item current">
+                </div>
+                <div id="date_4" class="daily-flex-item empty near_dates">
+                </div>
+                <div id="date_5" class="daily-flex-item empty near_dates">
+                </div>
+                <div id="incr_date" class="daily-flex-item">
+                    <span class="glyphicon glyphicon-triangle-right">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="daily_add_event_modal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Add Event</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="date_picker">Date:</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" id="date_picker" placeholder="MM/DD/YYYY">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="title">Title:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="title">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="location">Location:</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="location">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="description">Description:</label>
+                                <div class="col-sm-10">
+                                    <input type="text"  class="form-control" id="description">
+                                </div>
+                            </div>
+
+                        </form>
+                        <div id="warning" class="alert alert-danger hidden">
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="add_daily">Add</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Modal -->
+        <div class="modal fade" id="event_modal" role="dialog">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><span class="glyphicon glyphicon-chevron-left">Back</button>&nbsp;&nbsp;
+                    <span style="font-size: 24px; font-weight: 800" class="modal-title" id="event-title">Modal Header</span></span>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Date : </strong><button type="button" class="btn btn-link" data-dismiss="modal"><span id="event-date"></span></button></p>
+                    <p><strong>Location : </strong><span id="event-location"></span></p>
+                    <p><strong>Description : </strong><span id="event-description"></span></p>
+            </div>
+            </div>
+        </div>
+        <!-- Event Modal Ends-->
+
+    </div>
+
+</body>
+
+</html>
